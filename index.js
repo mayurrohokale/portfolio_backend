@@ -4,7 +4,9 @@ const app = express();
 const dotenv = require("dotenv");
 dotenv.config();
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
+app.use(cors());
 app.use(bodyParser.json());
 
 const user_name = process.env.EMAIL_USER;
